@@ -1,0 +1,1 @@
+This repo contains exercises and assignments of an udemy course on Angular by Mr. Brad Traversy

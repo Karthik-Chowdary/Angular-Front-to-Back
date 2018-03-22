@@ -6,31 +6,46 @@ import { Component } from "@angular/core"
     styleUrls : ['./user.component.css']
 })
 
+
+
 export class UserComponent{
     //Properties
-    firstName = 'John';
-    lastName = 'Doe';
-    age = 30;
-    address = {
-        street : '730 Riddle Rd',
-        city : 'Cincinnati',
-        state : 'Ohio'
-    };
+    firstName : String;
+    lastName : String;
+    age : Number;
+    address;
+    foo : any;
+    hasKids : Boolean;
+    numberArray : number[];
+    stringArray : string[];
+    mixedArray : any[];
+    myTuple : [number, string, boolean];
+    unusable : void;
+    u : undefined;
+    n : null;
 
     //Methods
     constructor(){
-        this.sayHello();
-        console.log(this.age);
-        this.hasBirthday();
-        console.log(this.age);
+        this.firstName = 'John';
+        this.lastName = 'Doe';
+        this.age = 30;
+        this.address = {
+            street : '730 Riddle Rd',
+            city : 'Cincinnati',
+            state : 'Ohio'
+        }
+        this.foo = 1;
+        this.hasKids = true;
+        this.numberArray = [1, 2, 3];
+        this.stringArray = ['Hello', 'World'];
+        this.mixedArray = [1, 'Hello', true];
+        this.myTuple = [1, 'Ssup', true];
+        this.unusable = undefined;
+        this.u = undefined;
+        this.n = null;
+        console.log(this.addNumbers(2, 3));
     }
-
-    sayHello(){
-        console.log(`Hello ${this.firstName}`);
-    }
-
-    hasBirthday(){
-        this.age += 1;
+    addNumbers(num1:number, num2:number): number{
+        return num1+num2;
     }
 }
-

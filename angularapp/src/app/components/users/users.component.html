@@ -15,6 +15,9 @@
             <ul class = "list-group" *ngIf = "showExtended && user.age && user.address">
             <li class = "list-group-item">Age: {{ user.age }}</li>
             <li class = "list-group-item">Address: {{ user.address.street }} {{ user.address.city }}, {{ user.address.state }}</li>
+            <li class="list-group-item">Balance : {{ user.balance | currency }}</li>
+            <li class="list-group-item">Joined: {{ user.registered | date:"longDate"}}</li>
+            <li class="list-group-item" ngNonBindable> {{ 5 | number:"1.2" }}</li>
           </ul>
         </div>
     </div>

@@ -8,5 +8,7 @@ export interface User {
         state? : String
        },
     image?: String,
-    isActive?: Boolean
+    isActive?: Boolean,
+    balance?: number,
+    registered?: any 
 }

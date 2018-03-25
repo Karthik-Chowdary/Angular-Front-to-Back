@@ -1,7 +1,7 @@
 <h2>Users</h2>
-<button [disabled]= "!enableAdd" class="btn btn-light btn-block mb-3">Add New User</button>
+<button [disabled]= "!enableAdd" class="btn btn-block mb-3" [ngClass] = "currentClasses">Add New User</button>
 <ul class = "list-unstyled" *ngIf = "loaded && users?.length > 0; else noUsers">
-  <li class = "card card-body mb-2"*ngFor = "let user of users">
+  <li class = "card card-body mb-2"*ngFor = "let user of users" [class.bg-light] = "user.isActive">
     <div class="row">
         <div class="col-sm-4">
           <!-- 3 Ways to do property binding -->

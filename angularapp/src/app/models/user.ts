@@ -7,8 +7,8 @@ export interface User {
         city? : String,
         state? : String
        },
-    image?: String,
+    // image?: String,
     isActive?: Boolean,
-    balance?: number,
+    // balance?: number,
     registered?: any 
 }

@@ -28,9 +28,9 @@ export class UsersComponent implements OnInit {
           city : 'New York',
           state : 'NY'
           },
-          image: 'http://lorempixel.com/600/600/people/3',
+          // image: 'http://lorempixel.com/600/600/people/3',
           isActive: true,
-          balance: 100,
+          // balance: 100,
           registered: new Date('01/02/2018 06:20:00')
       },
       {
@@ -42,9 +42,9 @@ export class UsersComponent implements OnInit {
         city : 'Cincinnati',
         state : 'OH'
             },
-            image: 'http://lorempixel.com/600/600/people/2',
+            // image: 'http://lorempixel.com/600/600/people/2',
             isActive: false,
-            balance: 100,
+            // balance: 100,
           registered: new Date('01/02/2018 06:20:00')
         },
     {
@@ -56,28 +56,28 @@ export class UsersComponent implements OnInit {
       city : 'San Diego',
       state : 'CA'
           },
-          image: 'http://lorempixel.com/600/600/people/1',
+          // image: 'http://lorempixel.com/600/600/people/1',
           isActive: true,
-          balance: 75,
+          // balance: 75,
           registered: new Date('01/11/2016 12:20:00')
       }
       ]
       this.loaded = true;
     
-    this.addUser({
-        firstName: 'Aditya',
-        lastName: 'Chava',
-        age: 21,
-        address: {
-        street : '2357 Champions Court',
-        city : 'Raleigh',
-        state : 'NC'
-        },
-        image: 'http://lorempixel.com/600/600/people/4',
-        isActive: false,
-        balance: 200,
-          registered: new Date('01/02/2017 04:20:00')
-    });
+    // this.addUser({
+    //     firstName: 'Aditya',
+    //     lastName: 'Chava',
+    //     age: 21,
+    //     address: {
+    //     street : '2357 Champions Court',
+    //     city : 'Raleigh',
+    //     state : 'NC'
+    //     },
+    //     image: 'http://lorempixel.com/600/600/people/4',
+    //     isActive: false,
+    //     balance: 200,
+    //       registered: new Date('01/02/2017 04:20:00')
+    // });
 
     this.setCurrentClasses();
     this.setCurrentStyles();

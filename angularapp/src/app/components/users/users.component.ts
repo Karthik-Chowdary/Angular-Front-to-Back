@@ -11,6 +11,7 @@ export class UsersComponent implements OnInit {
   users : User[];
   showExtended : Boolean = true;
   loaded : Boolean = false;
+  enableAdd : Boolean = true;
 
   constructor() { }
 
@@ -24,7 +25,8 @@ export class UsersComponent implements OnInit {
           street : '121 main st',
           city : 'New York',
           state : 'NY'
-          }
+          },
+          image: 'http://lorempixel.com/600/600/people/3'
       },
       {
         firstName: 'Karthik',
@@ -34,7 +36,8 @@ export class UsersComponent implements OnInit {
         street : '730 Riddle Rd',
         city : 'Cincinnati',
         state : 'OH'
-            }
+            },
+            image: 'http://lorempixel.com/600/600/people/2'
         },
     {
       firstName: 'Rashmitha',
@@ -44,7 +47,8 @@ export class UsersComponent implements OnInit {
       street : '6545 Montezuma Rd',
       city : 'San Diego',
       state : 'CA'
-          }
+          },
+          image: 'http://lorempixel.com/600/600/people/1'
       }
       ]
       this.loaded = true;
@@ -57,7 +61,8 @@ export class UsersComponent implements OnInit {
         street : '2357 Champions Court',
         city : 'Raleigh',
         state : 'NC'
-        }
+        },
+        image: 'http://lorempixel.com/600/600/people/4'
     });
   }
 

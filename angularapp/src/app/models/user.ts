@@ -6,5 +6,6 @@ export interface User {
         street? : String,
         city? : String,
         state? : String
-       }
+       },
+    image?: String
 }

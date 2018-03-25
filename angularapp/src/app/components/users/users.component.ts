@@ -10,7 +10,7 @@ import { User } from '../../models/user'
 export class UsersComponent implements OnInit {
   users : User[];
   showExtended : Boolean = true;
-  loaded : Boolean = false;
+  loaded : Boolean = true;
 
   constructor() { }
 
@@ -47,7 +47,6 @@ export class UsersComponent implements OnInit {
           }
       }
       ]
-      this.loaded = true;
     
     this.addUser({
         firstName: 'Aditya',

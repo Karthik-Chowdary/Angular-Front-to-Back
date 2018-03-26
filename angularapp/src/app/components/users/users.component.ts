@@ -31,7 +31,8 @@ export class UsersComponent implements OnInit {
           // image: 'http://lorempixel.com/600/600/people/3',
           isActive: true,
           // balance: 100,
-          registered: new Date('01/02/2018 06:20:00')
+          registered: new Date('01/02/2018 06:20:00'),
+          hide: true
       },
       {
         firstName: 'Karthik',
@@ -45,7 +46,8 @@ export class UsersComponent implements OnInit {
             // image: 'http://lorempixel.com/600/600/people/2',
             isActive: false,
             // balance: 100,
-          registered: new Date('01/02/2018 06:20:00')
+          registered: new Date('01/02/2018 06:20:00'),
+          hide: true
         },
     {
       firstName: 'Rashmitha',
@@ -59,7 +61,8 @@ export class UsersComponent implements OnInit {
           // image: 'http://lorempixel.com/600/600/people/1',
           isActive: true,
           // balance: 75,
-          registered: new Date('01/11/2016 12:20:00')
+          registered: new Date('01/11/2016 12:20:00'),
+          hide: true
       }
       ]
       this.loaded = true;
@@ -85,6 +88,10 @@ export class UsersComponent implements OnInit {
 
   addUser(user: User){
     this.users.push(user);
+  }
+
+  toggleHide(user: User){
+    user.hide = !user.hide;
   }
 
   setCurrentClasses(){

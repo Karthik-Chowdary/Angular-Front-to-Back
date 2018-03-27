@@ -14,6 +14,7 @@ export class UsersComponent implements OnInit {
   enableAdd : Boolean = true;
   currentClasses: {}
   currentStyles: {}
+  showUserForm: Boolean = false;
 
   constructor() { }
 
@@ -90,9 +91,9 @@ export class UsersComponent implements OnInit {
     this.users.push(user);
   }
 
-  toggleHide(user: User){
-    user.hide = !user.hide;
-  }
+  // toggleHide(user: User){
+  //   user.hide = !user.hide;
+  // }
 
   setCurrentClasses(){
     this.currentClasses = {
@@ -109,4 +110,8 @@ export class UsersComponent implements OnInit {
         'font-size' : this.showExtended ? '' : '40px'
       }
     } 
+
+    onSubmit(){
+      
+    }
 }

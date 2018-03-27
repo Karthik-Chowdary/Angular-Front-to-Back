@@ -11,12 +11,7 @@ export class UsersComponent implements OnInit {
   user : User = {
           firstName: '',
           lastName: '',
-          age: null,
-          address: {
-          street : '',
-          city : '',
-          state: ''
-          }
+          email: ''
   }
   users : User[];
   showExtended : Boolean = true;
@@ -33,12 +28,7 @@ export class UsersComponent implements OnInit {
         {
           firstName: 'John',
           lastName: 'Doe',
-          age: 30,
-          address: {
-          street : '121 main st',
-          city : 'New York',
-          state : 'NY'
-          },
+          email: 'johndoe@gmail.com',
           // image: 'http://lorempixel.com/600/600/people/3',
           isActive: true,
           // balance: 100,
@@ -48,12 +38,7 @@ export class UsersComponent implements OnInit {
       {
         firstName: 'Karthik',
         lastName: 'Chowdary',
-        age: 21,
-        address: {
-        street : '730 Riddle Rd',
-        city : 'Cincinnati',
-        state : 'OH'
-            },
+        email: 'svskc@yahoo.com',
             // image: 'http://lorempixel.com/600/600/people/2',
             isActive: false,
             // balance: 100,
@@ -63,12 +48,7 @@ export class UsersComponent implements OnInit {
     {
       firstName: 'Rashmitha',
       lastName: 'Reddy',
-      age: 22,
-      address: {
-      street : '6545 Montezuma Rd',
-      city : 'San Diego',
-      state : 'CA'
-          },
+      email: 'rash@outlook.com',
           // image: 'http://lorempixel.com/600/600/people/1',
           isActive: true,
           // balance: 75,
@@ -97,21 +77,16 @@ export class UsersComponent implements OnInit {
     this.setCurrentStyles();
   }
 
-  addUser(){
-    this.user.isActive = true;
-    this.user.registered = new Date();
-    this.users.unshift(this.user);
-    this.user = {
-      firstName: '',
-          lastName: '',
-          age: null,
-          address: {
-          street : '',
-          city : '',
-          state: ''
-          }
-    }
-  }
+  // addUser(){
+  //   this.user.isActive = true;
+  //   this.user.registered = new Date();
+  //   this.users.unshift(this.user);
+  //   this.user = {
+  //     firstName: '',
+  //         lastName: '',
+  //         email: ''
+  //   }
+  // }
 
   // toggleHide(user: User){
   //   user.hide = !user.hide;

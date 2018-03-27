@@ -11,10 +11,10 @@
         <input type="text" class = "form-control" [(ngModel)] = "user.lastName" name = "LastName">
       </div>
       <div class="form-group">
-          <label>Age</label>
-          <input type="number" class = "form-control" [(ngModel)] = "user.age" name = "age">
+          <label>Email</label>
+          <input type="text" class = "form-control" [(ngModel)] = "user.email" name = "email">
         </div>
-        <div class="form-group">
+        <!-- <div class="form-group">
             <label>Street address</label>
             <input type="text" class = "form-control" [(ngModel)] = "user.address.street" name = "streetAddress">
           </div>
@@ -25,8 +25,8 @@
             <div class="form-group">
                 <label>State</label>
                 <input type="text" class = "form-control" [(ngModel)] = "user.address.state" name = "state">
-              </div>
-    <button (click) = "addUser()" [disabled]= "user.firstName == '' || user.lastName == ''" class="btn btn-block mb-3">Add New User</button>
+              </div> -->
+    <button [disabled]= "user.firstName == '' || user.lastName == ''" class="btn btn-block mb-3">Add New User</button>
   </form>
 </div>
 <h2>Users</h2>
@@ -42,11 +42,11 @@
         <!-- </div> -->
         <!-- <div class="col-sm-8"> -->
             <h3>{{ user.firstName }} {{ user.lastName }}
-              <small *ngIf = "user.age && user.address"><button (click) = "user.hide = !user.hide" class = "btn btn-dark btn-sm"><i [ngClass] = "user.hide ? 'fa fa-plus' : 'fa fa-minus'"></i></button></small>
+              <small><button (click) = "user.hide = !user.hide" class = "btn btn-dark btn-sm"><i [ngClass] = "user.hide ? 'fa fa-plus' : 'fa fa-minus'"></i></button></small>
             </h3>
-            <ul class = "list-group" *ngIf = "!user.hide && user.age && user.address">
-            <li class = "list-group-item">Age: {{ user.age }}</li>
-            <li class = "list-group-item">Address: {{ user.address.street }} {{ user.address.city }}, {{ user.address.state }}</li>
+            <ul class = "list-group" *ngIf = "!user.hide">
+            <li class = "list-group-item">Email: {{ user.email }}</li>
+            <!-- <li class = "list-group-item">Address: {{ user.address.street }} {{ user.address.city }}, {{ user.address.state }}</li> -->
             <!-- <li class="list-group-item">Balance : {{ user.balance | currency }}</li> -->
             <li class="list-group-item">Joined: {{ user.registered | date:"longDate"}}</li>
             <!-- <li class="list-group-item" ngNonBindable> {{ 5 | number:"1.2" }}</li> -->

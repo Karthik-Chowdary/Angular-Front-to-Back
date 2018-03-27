@@ -8,6 +8,16 @@ import { User } from '../../models/user'
   styleUrls: ['./users.component.css']
 })
 export class UsersComponent implements OnInit {
+  user : User = {
+          firstName: '',
+          lastName: '',
+          age: null,
+          address: {
+          street : '',
+          city : '',
+          state: ''
+          }
+  }
   users : User[];
   showExtended : Boolean = true;
   loaded : Boolean = false;
@@ -87,8 +97,20 @@ export class UsersComponent implements OnInit {
     this.setCurrentStyles();
   }
 
-  addUser(user: User){
-    this.users.push(user);
+  addUser(){
+    this.user.isActive = true;
+    this.user.registered = new Date();
+    this.users.unshift(this.user);
+    this.user = {
+      firstName: '',
+          lastName: '',
+          age: null,
+          address: {
+          street : '',
+          city : '',
+          state: ''
+          }
+    }
   }
 
   // toggleHide(user: User){

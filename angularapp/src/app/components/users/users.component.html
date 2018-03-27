@@ -4,29 +4,29 @@
   <form (submit) = "onSubmit()">
     <div class="form-group">
       <label>First Name</label>
-      <input type="text" class = "form-control" name = "firstName">
+      <input type="text" class = "form-control" [(ngModel)] = "user.firstName" name = "firstName">
     </div>
     <div class="form-group">
         <label>Last Name</label>
-        <input type="text" class = "form-control" name = "LastName">
+        <input type="text" class = "form-control" [(ngModel)] = "user.lastName" name = "LastName">
       </div>
       <div class="form-group">
           <label>Age</label>
-          <input type="number" class = "form-control" name = "age">
+          <input type="number" class = "form-control" [(ngModel)] = "user.age" name = "age">
         </div>
         <div class="form-group">
             <label>Street address</label>
-            <input type="text" class = "form-control" name = "streetAddress">
+            <input type="text" class = "form-control" [(ngModel)] = "user.address.street" name = "streetAddress">
           </div>
           <div class="form-group">
               <label>City</label>
-              <input type="text" class = "form-control" name = "city">
+              <input type="text" class = "form-control" [(ngModel)] = "user.address.city" name = "city">
             </div>
             <div class="form-group">
                 <label>State</label>
-                <input type="text" class = "form-control" name = "state">
+                <input type="text" class = "form-control" [(ngModel)] = "user.address.state" name = "state">
               </div>
-    <button (click) = "addUser({firstName: 'Aditya', lastName: 'Chava', isActive: true})" [disabled]= "!enableAdd" class="btn btn-block mb-3">Add New User</button>
+    <button (click) = "addUser()" [disabled]= "user.firstName == '' || user.lastName == ''" class="btn btn-block mb-3">Add New User</button>
   </form>
 </div>
 <h2>Users</h2>

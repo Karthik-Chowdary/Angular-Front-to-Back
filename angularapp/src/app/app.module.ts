@@ -7,7 +7,8 @@ import { AppComponent } from './app.component';
 import { UserComponent } from './components/user/user.component';
 import { UsersComponent } from './components/users/users.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
-import { LoginComponent } from './components/login/login.component'
+import { LoginComponent } from './components/login/login.component';
+import { DataServiceService } from './services/data-service.service'
 
 
 @NgModule({
@@ -22,7 +23,7 @@ import { LoginComponent } from './components/login/login.component'
     BrowserModule,
     FormsModule
   ],
-  providers: [],
+  providers: [DataServiceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

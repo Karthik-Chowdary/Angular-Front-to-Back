@@ -7,7 +7,6 @@ import { AppComponent } from './app.component';
 import { UserComponent } from './components/user/user.component';
 import { UsersComponent } from './components/users/users.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
-import { LoginComponent } from './components/login/login.component';
 import { DataServiceService } from './services/data-service.service'
 
 
@@ -16,8 +15,7 @@ import { DataServiceService } from './services/data-service.service'
     AppComponent,
     UserComponent,
     UsersComponent,
-    NavbarComponent,
-    LoginComponent
+    NavbarComponent
   ],
   imports: [
     BrowserModule,

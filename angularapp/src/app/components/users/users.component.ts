@@ -26,8 +26,11 @@ export class UsersComponent implements OnInit {
 
   ngOnInit() {
     
-      this.users = this.dataservice.getUsers();
-      this.loaded = true;
+      this.dataservice.getUsers().subscribe(users => {
+        this.users = users;
+        this.loaded = true;
+      })
+      
     
     // this.addUser({
     //     firstName: 'Aditya',

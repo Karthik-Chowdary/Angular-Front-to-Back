@@ -5,7 +5,7 @@
     <h3>{{ post.title }}</h3>
     <p>{{ post.body }}</p>
     <hr>
-    <button class="btn btn-danger"><i class="fa fa-close"></i></button>
+    <button (click)="removePost(post)" class="btn btn-danger"><i class="fa fa-close"></i></button>
     <button (click)="editPost(post)" class="btn btn-primary"><i class="fa fa-pencil"></i></button>
   </div>
 </div>

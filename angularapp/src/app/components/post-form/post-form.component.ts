@@ -37,5 +37,6 @@ export class PostFormComponent implements OnInit {
       this.updatedPost.emit(post);
     })
   }
+  
 
 }

@@ -12,7 +12,8 @@ import { UserService } from './services/User.service';
 import { PostsComponent } from './components/posts/posts.component';
 import { PostService } from './services/post.service';
 import { PostFormComponent } from './components/post-form/post-form.component';
-import { AppRoutingModule } from './/app-routing.module'
+import { AppRoutingModule } from './/app-routing.module';
+import { HomeComponent } from './components/home/home.component'
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { AppRoutingModule } from './/app-routing.module'
     UsersComponent,
     NavbarComponent,
     PostsComponent,
-    PostFormComponent
+    PostFormComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,

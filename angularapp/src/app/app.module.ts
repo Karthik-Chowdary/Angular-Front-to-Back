@@ -13,7 +13,8 @@ import { PostsComponent } from './components/posts/posts.component';
 import { PostService } from './services/post.service';
 import { PostFormComponent } from './components/post-form/post-form.component';
 import { AppRoutingModule } from './/app-routing.module';
-import { HomeComponent } from './components/home/home.component'
+import { HomeComponent } from './components/home/home.component';
+import { PostDetailComponent } from './components/post-detail/post-detail.component'
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import { HomeComponent } from './components/home/home.component'
     NavbarComponent,
     PostsComponent,
     PostFormComponent,
-    HomeComponent
+    HomeComponent,
+    PostDetailComponent
   ],
   imports: [
     BrowserModule,

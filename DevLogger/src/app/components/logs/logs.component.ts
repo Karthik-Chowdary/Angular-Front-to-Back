@@ -15,4 +15,8 @@ logs: Log[];
     this.logs = this.logService.getLogs();
   }
 
+  onSelect(log: Log){
+    this.logService.setFormLog(log);
+  }
+
 }

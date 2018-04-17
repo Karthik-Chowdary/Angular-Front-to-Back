@@ -15,11 +15,12 @@ export class LogService {
   stateClear = this.stateSource.asObservable();
 
   constructor() {
-    this.logs= [
-      {id: '1', text: 'Generated Components', date: new Date('12/12/2017 12:00:00')},
-      {id: '2', text: 'Added Bootstrap', date: new Date('12/13/2017 12:00:00')},
-      {id: '3', text: 'Log component added', date: new Date('12/14/2017 12:00:00')}
-    ]
+    // this.logs= [
+    //   {id: '1', text: 'Generated Components', date: new Date('12/12/2017 12:00:00')},
+    //   {id: '2', text: 'Added Bootstrap', date: new Date('12/13/2017 12:00:00')},
+    //   {id: '3', text: 'Log component added', date: new Date('12/14/2017 12:00:00')}
+    // ]
+    this.logs = [];
    }
 
    getLogs(): Observable<Log[]>{

@@ -26,6 +26,7 @@ loaded: boolean = false;
 
     this.logService.getLogs().subscribe(logs => {
       this.logs = logs;
+      this.loaded = true;
   })
 }
 
